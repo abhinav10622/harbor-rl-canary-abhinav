@@ -1,0 +1,5 @@
+agents:
+  - name: terminus-2
+    model_name: groq/openai/gpt-oss-120b
+    kwargs:
+      max_tokens: 1024

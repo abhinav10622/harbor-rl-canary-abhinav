@@ -58,4 +58,6 @@ assert d == {"total_valid_amount":3.5,"valid_count":1,"failed_count":1}
     score=$((score + 30))
 fi
 
+mkdir -p /logs/verifier
+awk -v s="$score" 'BEGIN { printf "%.2f\\n", s/100 }' > /logs/verifier/reward.txt
 echo "$score"
